@@ -1,0 +1,55 @@
+version: '3.8'
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      PGUSER: postgres
+      POSTGRES_PASSWORD: difyai123456
+      POSTGRES_DB: dify
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+
+  # Redis
+  redis:
+    image: redis:6-alpine
+    restart: always
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass difyai123456
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+
+  # Weaviate Vector Database
+  weaviate:
+    image: semitechnologies/weaviate:1.19.0
+    restart: always
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+    ports:
+      - "8080:8080"
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      CLUSTER_HOSTNAME: 'node1'
+
+volumes:
+  db_data:
+  redis_data:
+  weaviate_data:

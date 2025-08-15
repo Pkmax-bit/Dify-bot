@@ -1,0 +1,61 @@
+/* Banana green theme for Dify */
+html[data-theme="light"], html[data-theme="dark"] {
+  --color-components-input-bg-normal: #bfff00;
+  --color-components-input-text-placeholder: #bfff00;
+  --color-components-input-bg-hover: #bfff00;
+  --color-components-input-bg-active: #bfff00;
+  --color-components-input-border-active: #bfff00;
+  --color-components-input-border-destructive: #bfff00;
+  --color-components-input-text-filled: #bfff00;
+  --color-components-input-bg-destructive: #bfff00;
+  --color-components-input-bg-disabled: #bfff00;
+  --color-components-input-text-disabled: #bfff00;
+  --color-components-input-text-filled-disabled: #bfff00;
+  --color-components-input-border-hover: #bfff00;
+  --color-components-input-border-active-prompt-1: #bfff00;
+  --color-components-input-border-active-prompt-2: #bfff00;
+
+  --color-components-kbd-bg-gray: #bfff00;
+  --color-components-kbd-bg-white: #bfff00;
+
+  --color-components-tooltip-bg: #bfff00;
+
+  --color-components-button-primary-text: #fff;
+  --color-components-button-primary-bg: #bfff00;
+  --color-components-button-primary-border: #bfff00;
+  --color-components-button-primary-bg-hover: #aeea00;
+  --color-components-button-primary-border-hover: #bfff00;
+  --color-components-button-primary-bg-disabled: #eaffae;
+  --color-components-button-primary-border-disabled: #bfff00;
+  --color-components-button-primary-text-disabled: #fff;
+
+  --color-components-button-secondary-text: #bfff00;
+  --color-components-button-secondary-text-disabled: #bfff00;
+  --color-components-button-secondary-bg: #bfff00;
+  --color-components-button-secondary-bg-hover: #aeea00;
+  --color-components-button-secondary-bg-disabled: #eaffae;
+  --color-components-button-secondary-border: #bfff00;
+  --color-components-button-secondary-border-hover: #bfff00;
+  --color-components-button-secondary-border-disabled: #bfff00;
+
+  --color-components-button-tertiary-text: #bfff00;
+  --color-components-button-tertiary-text-disabled: #bfff00;
+  --color-components-button-tertiary-bg: #bfff00;
+  --color-components-button-tertiary-bg-hover: #aeea00;
+  --color-components-button-tertiary-bg-disabled: #eaffae;
+
+  --color-components-button-ghost-text: #bfff00;
+  --color-components-button-ghost-text-disabled: #bfff00;
+  --color-components-button-ghost-bg-hover: #aeea00;
+
+  --color-components-checkbox-icon: #bfff00;
+  --color-components-checkbox-icon-disabled: #bfff00;
+  --color-components-checkbox-bg: #bfff00;
+  --color-components-checkbox-bg-hover: #aeea00;
+  --color-components-checkbox-bg-disabled: #eaffae;
+  --color-components-checkbox-border: #bfff00;
+  --color-components-checkbox-border-hover: #bfff00;
+  --color-components-checkbox-border-disabled: #bfff00;
+  --color-components-checkbox-bg-unchecked: #bfff00;
+  --color-components-checkbox-bg-unchecked-hover: #aeea00;
+}

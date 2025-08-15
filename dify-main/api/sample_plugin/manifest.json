@@ -1,0 +1,16 @@
+{
+  "name": "Sample Local Plugin",
+  "version": "1.0.0",
+  "description": "A sample plugin for local development",
+  "author": "Local Developer",
+  "icon": "🔧",
+  "type": "tool",
+  "endpoints": [
+    {
+      "name": "hello",
+      "method": "POST",
+      "path": "/hello",
+      "description": "Say hello with custom message"
+    }
+  ]
+}
