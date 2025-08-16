@@ -13,6 +13,27 @@ const wrapResponseWithXFrameOptions = (response: NextResponse, pathname: string)
 }
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
+  
+  // Check if accessing admin routes
+  if (pathname.startsWith('/admin')) {
+    // Check if admin session is valid
+    const adminToken = request.cookies.get('admin_session_token')?.value
+    const adminExpires = request.cookies.get('admin_session_expires')?.value
+    const adminSessionId = request.cookies.get('admin_session_id')?.value
+    
+    if (!adminToken || !adminExpires || !adminSessionId || Date.now() >= parseInt(adminExpires)) {
+      // Redirect to home page if no valid admin session
+      const response = NextResponse.redirect(new URL('/', request.url))
+      
+      // Clear invalid cookies
+      response.cookies.delete('admin_session_token')
+      response.cookies.delete('admin_session_expires')
+      response.cookies.delete('admin_session_id')
+      
+      return response
+    }
+  }
+  
   const requestHeaders = new Headers(request.headers)
   const response = NextResponse.next({
     request: {

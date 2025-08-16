@@ -48,3 +48,59 @@ def init_app(app: DifyApp):
 
     app.register_blueprint(inner_api_bp)
     app.register_blueprint(mcp_bp)
+    
+    # Register admin logs blueprint
+    try:
+        from controllers.console.admin.logs import bp as admin_logs_bp
+        app.register_blueprint(admin_logs_bp)
+        print("✅ Admin logs blueprint registered successfully!")
+    except Exception as e:
+        print(f"⚠️ Failed to register admin logs blueprint: {e}")
+    
+    # Register Dify logs blueprint 
+    try:
+        from controllers.console.admin.dify_logs import admin_logs_bp
+        app.register_blueprint(admin_logs_bp)
+        print("✅ Dify logs blueprint registered successfully!")
+    except Exception as e:
+        print(f"⚠️ Failed to register dify logs blueprint: {e}")
+    
+    # Register data sync blueprint
+    try:
+        from controllers.console.admin.data_sync import bp as data_sync_bp
+        app.register_blueprint(data_sync_bp)
+        print("✅ Data sync blueprint registered successfully!")
+    except Exception as e:
+        print(f"⚠️ Failed to register data sync blueprint: {e}")
+    
+    # Register error sync blueprint
+    try:
+        from controllers.console.admin.error_sync import bp as error_sync_bp
+        app.register_blueprint(error_sync_bp)
+        print("✅ Error sync blueprint registered successfully!")
+    except Exception as e:
+        print(f"⚠️ Failed to register error sync blueprint: {e}")
+    
+    # Register Supabase API blueprint for /api/admin routes
+    try:
+        from controllers.console.admin.api_supabase import bp as api_supabase_bp
+        app.register_blueprint(api_supabase_bp)
+        print("✅ API Supabase blueprint registered successfully!")
+    except Exception as e:
+        print(f"⚠️ Failed to register API supabase blueprint: {e}")
+    
+    # Register Supabase direct access blueprint
+    try:
+        from controllers.console.admin.supabase_direct import bp as supabase_direct_bp
+        app.register_blueprint(supabase_direct_bp)
+        print("✅ Supabase direct blueprint registered successfully!")
+    except Exception as e:
+        print(f"⚠️ Failed to register supabase direct blueprint: {e}")
+    
+    # Register admin verification blueprint
+    try:
+        from controllers.console.admin.admin_verification import admin_verification_bp
+        app.register_blueprint(admin_verification_bp)
+        print("✅ Admin verification blueprint registered successfully!")
+    except Exception as e:
+        print(f"⚠️ Failed to register admin verification blueprint: {e}")

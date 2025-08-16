@@ -1,6 +1,12 @@
 from libs.exception import BaseHTTPException
 
 
+class UnauthorizedError(BaseHTTPException):
+    error_code = "unauthorized"
+    description = "Unauthorized access."
+    code = 401
+
+
 class ApiKeyAuthFailedError(BaseHTTPException):
     error_code = "auth_failed"
     description = "{message}"

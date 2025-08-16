@@ -1,10 +1,34 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 
 const WelcomePage = () => {
+  // Override global CSS to allow scrolling
+  useEffect(() => {
+    // Store original values
+    const originalBodyOverflow = document.body.style.overflow
+    const originalHtmlOverflow = document.documentElement.style.overflow
+    
+    // Enable scrolling
+    document.body.style.overflow = 'auto'
+    document.documentElement.style.overflow = 'auto'
+    
+    // Cleanup function to restore original values
+    return () => {
+      document.body.style.overflow = originalBodyOverflow || 'hidden'
+      document.documentElement.style.overflow = originalHtmlOverflow || 'hidden'
+    }
+  }, [])
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div 
+      className="bg-gradient-to-br from-blue-50 via-white to-purple-50"
+      style={{ 
+        minHeight: '100vh', 
+        overflow: 'auto',
+        WebkitOverflowScrolling: 'touch' // For smooth scrolling on mobile
+      }}
+    >
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
@@ -20,7 +44,7 @@ const WelcomePage = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               Chào mừng đến với
               <span className="block bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                Dify AI Platform
+                ..... AI Platform
               </span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -181,11 +205,14 @@ const WelcomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Dify AI Platform. Được xây dựng với ❤️ cho cộng đồng developer Việt Nam.
+              © 2025 Được xây dựng với ..... 
             </p>
           </div>
         </div>
       </div>
+      
+      {/* Bottom padding for better scrolling */}
+      <div className="h-16"></div>
     </div>
   )
 }

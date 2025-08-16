@@ -12,6 +12,11 @@ interface CardHeaderProps {
   className?: string
 }
 
+interface CardTitleProps {
+  children: React.ReactNode
+  className?: string
+}
+
 interface CardContentProps {
   children: React.ReactNode
   className?: string
@@ -33,6 +38,14 @@ export const CardHeader: FC<CardHeaderProps> = ({ children, className = '' }) =>
     <div className={`px-6 py-4 border-b border-gray-200 ${className}`}>
       {children}
     </div>
+  )
+}
+
+export const CardTitle: FC<CardTitleProps> = ({ children, className = '' }) => {
+  return (
+    <h3 className={`text-lg font-semibold text-gray-900 ${className}`}>
+      {children}
+    </h3>
   )
 }
 

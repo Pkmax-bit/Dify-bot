@@ -31,6 +31,16 @@ def create_app() -> DifyApp:
     start_time = time.perf_counter()
     app = create_flask_app_with_configs()
     initialize_extensions(app)
+    
+    # Initialize chat logging middleware
+    try:
+        from middlewares.chat_logging_middleware import chat_logging_middleware
+        chat_logging_middleware.init_app(app)
+        if dify_config.DEBUG:
+            logging.info("Loaded chat logging middleware")
+    except Exception as e:
+        logging.warning(f"Failed to load chat logging middleware: {e}")
+    
     # Bổ sung cấu hình CORS cho phép credentials
     CORS(app, origins=["http://localhost:3000"], supports_credentials=True)
     end_time = time.perf_counter()

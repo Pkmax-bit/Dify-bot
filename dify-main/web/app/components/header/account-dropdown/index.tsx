@@ -6,6 +6,7 @@ import {
   RiAccountCircleLine,
   RiArrowRightUpLine,
   RiBookOpenLine,
+  RiDashboardLine,
   RiGithubLine,
   RiGraduationCapFill,
   RiInformation2Line,
@@ -25,6 +26,7 @@ import Compliance from './compliance'
 import PremiumBadge from '@/app/components/base/premium-badge'
 import Avatar from '@/app/components/base/avatar'
 import ThemeSwitcher from '@/app/components/base/theme-switcher'
+import AdminVerificationModal from '@/app/components/admin/admin-verification-modal'
 import { logout } from '@/service/common'
 import { useAppContext } from '@/context/app-context'
 import { useProviderContext } from '@/context/provider-context'
@@ -41,6 +43,7 @@ export default function AppSelector() {
   `
   const router = useRouter()
   const [aboutVisible, setAboutVisible] = useState(false)
+  const [showAdminVerification, setShowAdminVerification] = useState(false)
   const { systemFeatures } = useGlobalPublicStore()
 
   const { t } = useTranslation()
@@ -48,6 +51,38 @@ export default function AppSelector() {
   const { userProfile, langGeniusVersionInfo, isCurrentWorkspaceOwner } = useAppContext()
   const { isEducationAccount } = useProviderContext()
   const { setShowAccountSettingModal } = useModalContext()
+
+  const handleAdminAccess = () => {
+    // Check if admin session is valid from localStorage or cookies
+    const adminToken = localStorage.getItem('admin_session_token')
+    const adminExpires = localStorage.getItem('admin_session_expires')
+    
+    // Also check cookies as fallback
+    const getCookie = (name: string) => {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop()?.split(';').shift();
+      return null;
+    }
+    
+    const cookieToken = getCookie('admin_session_token')
+    const cookieExpires = getCookie('admin_session_expires')
+    
+    const isValidSession = (adminToken && adminExpires && Date.now() < parseInt(adminExpires)) ||
+                          (cookieToken && cookieExpires && Date.now() < parseInt(cookieExpires))
+    
+    if (isValidSession) {
+      // Session is valid, go directly to admin
+      router.push('/admin')
+    } else {
+      // Need verification
+      setShowAdminVerification(true)
+    }
+  }
+
+  const handleAdminVerificationSuccess = () => {
+    router.push('/admin')
+  }
 
   const handleLogout = async () => {
     await logout({
@@ -116,6 +151,18 @@ export default function AppSelector() {
                         <div className='system-md-regular grow px-1 text-text-secondary'>{t('common.account.account')}</div>
                         <RiArrowRightUpLine className='size-[14px] shrink-0 text-text-tertiary' />
                       </Link>
+                    </MenuItem>
+                    <MenuItem>
+                      <div
+                        className={cn(itemClassName, 'group',
+                          'data-[active]:bg-state-base-hover',
+                        )}
+                        onClick={handleAdminAccess}
+                      >
+                        <RiDashboardLine className='size-4 shrink-0 text-text-tertiary' />
+                        <div className='system-md-regular grow px-1 text-text-secondary'>Admin Dashboard</div>
+                        <RiArrowRightUpLine className='size-[14px] shrink-0 text-text-tertiary' />
+                      </div>
                     </MenuItem>
                     <MenuItem>
                       <div className={cn(itemClassName,
@@ -192,6 +239,11 @@ export default function AppSelector() {
       {
         aboutVisible && <AccountAbout onCancel={() => setAboutVisible(false)} langGeniusVersionInfo={langGeniusVersionInfo} />
       }
+      <AdminVerificationModal
+        isShow={showAdminVerification}
+        onClose={() => setShowAdminVerification(false)}
+        onSuccess={handleAdminVerificationSuccess}
+      />
     </div >
   )
 }
