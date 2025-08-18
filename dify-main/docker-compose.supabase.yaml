@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  # Redis - for caching and task queue
+  redis:
+    image: redis:6-alpine
+    restart: always
+    volumes:
+      - redis_data:/data
+    command: redis-server --requirepass difyai123456
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "difyai123456", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  redis_data:
