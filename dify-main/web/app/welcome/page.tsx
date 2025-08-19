@@ -61,12 +61,6 @@ const WelcomePage = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Link>
-              <Link 
-                href="/datasets" 
-                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
-              >
-                Khám phá Dataset
-              </Link>
             </div>
           </div>
         </div>
@@ -77,7 +71,7 @@ const WelcomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Tính năng nổi bật của Dify
+              Tính năng nổi bật của .....
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Khám phá những công cụ mạnh mẽ giúp bạn tạo ra các ứng dụng AI tuyệt vời
@@ -185,17 +179,7 @@ const WelcomePage = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
               </svg>
             </Link>
-            <a 
-              href="https://docs.dify.ai" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-3 border-2 border-white/30 text-base font-medium rounded-lg text-white hover:bg-white/10 transition-colors duration-200"
-            >
-              Xem tài liệu
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
+            
           </div>
         </div>
       </div>
