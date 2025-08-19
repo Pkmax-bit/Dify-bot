@@ -3,7 +3,8 @@
 import { useState, useEffect, useMemo } from 'react'
 import { format, parseISO } from 'date-fns'
 import { vi } from 'date-fns/locale'
-import { Search, ServerCrash, Inbox, ChevronDown, BarChart2, CheckCircle, Clock, AlertTriangle, Cpu, Type, User, Bot, Calendar } from 'lucide-react'
+// Thêm icon RotateCw
+import { Search, ServerCrash, Inbox, ChevronDown, BarChart2, CheckCircle, Clock, AlertTriangle, Cpu, Type, User, Bot, Calendar, RotateCw } from 'lucide-react'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'
 import { motion, AnimatePresence } from 'framer-motion'
 import DatePicker from 'react-datepicker'
@@ -54,6 +55,7 @@ export default function AdminPage() {
     const [searchTerm, setSearchTerm] = useState('')
     const [startDate, setStartDate] = useState<Date | null>(null)
     const [endDate, setEndDate] = useState<Date | null>(null)
+    const [isRefreshing, setIsRefreshing] = useState(false) // State mới cho nút làm mới
 
     // Override global CSS to allow scrolling
     useEffect(() => {
@@ -72,26 +74,35 @@ export default function AdminPage() {
         }
     }, [])
 
-    useEffect(() => {
-        const fetchErrors = async () => {
-            try {
-                const response = await fetch('/api/admin/supabase-errors?limit=100')
-                if (response.ok) {
-                    const data = await response.json()
-                    if (data.success) {
-                        setErrors(data.errors?.sort((a: ErrorLog, b: ErrorLog) => 
-                            new Date(b.created_at).getTime() - new Date(a.created_at).getTime()) || [])
-                        setStatus('success')
-                    }
+    const fetchErrors = async () => {
+        try {
+            const response = await fetch('/api/admin/supabase-error_logs?limit=100')
+            if (response.ok) {
+                const data = await response.json()
+                if (data.success) {
+                    setErrors(data.errors?.sort((a: ErrorLog, b: ErrorLog) => 
+                        new Date(b.created_at).getTime() - new Date(a.created_at).getTime()) || [])
+                    setStatus('success')
                 }
-            } catch (err) {
-                console.error('Error fetching error logs:', err)
-                setStatus('error')
             }
+        } catch (err) {
+            console.error('Error fetching error logs:', err)
+            setStatus('error')
         }
-        fetchErrors()
+    }
 
-        // Auto refresh every 30 seconds
+    // Hàm mới để xử lý việc nhấn nút làm mới
+    const handleManualFetch = async () => {
+        setIsRefreshing(true)
+        await fetchErrors()
+        // Thêm một chút delay để người dùng cảm nhận được việc làm mới
+        setTimeout(() => setIsRefreshing(false), 500)
+    }
+
+    useEffect(() => {
+        fetchErrors() // Fetch ban đầu
+
+        // Auto refresh mỗi 30 giây
         const interval = setInterval(fetchErrors, 30000)
         return () => clearInterval(interval)
     }, [])
@@ -110,7 +121,7 @@ export default function AdminPage() {
             const endDateTime = endDate ? new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), 23, 59, 59) : null
             
             const matchesDateRange = (!startDateTime || errorDate >= startDateTime) &&
-                                   (!endDateTime || errorDate <= endDateTime)
+                                      (!endDateTime || errorDate <= endDateTime)
             
             return matchesSearch && matchesDateRange
         })
@@ -180,7 +191,7 @@ export default function AdminPage() {
                                         selectsEnd
                                         startDate={startDate}
                                         endDate={endDate}
-                                        minDate={startDate}
+                                        minDate={startDate ?? undefined}
                                         placeholderText="Chọn ngày kết thúc"
                                         dateFormat="dd/MM/yyyy"
                                         locale={vi}
@@ -192,15 +203,25 @@ export default function AdminPage() {
                                     <Calendar className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-blue-400 pointer-events-none" />
                                 </div>
                             </div>
-                            <div className="flex justify-center">
+                            {/* Cập nhật khu vực các nút */}
+                            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
                                 <button
                                     onClick={() => {
                                         setStartDate(null)
                                         setEndDate(null)
                                     }}
-                                    className="px-6 py-3 bg-gradient-to-r from-gray-500 to-gray-600 text-white rounded-lg hover:from-gray-600 hover:to-gray-700 transition-all duration-200 font-medium shadow-md transform hover:scale-105"
+                                    className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-gray-500 to-gray-600 text-white rounded-lg hover:from-gray-600 hover:to-gray-700 transition-all duration-200 font-medium shadow-md transform hover:scale-105 flex items-center justify-center"
                                 >
-                                    🗑️ Xóa bộ lọc
+                                    🗑️ 
+                                    <span className="ml-2">Xóa bộ lọc</span>
+                                </button>
+                                <button
+                                    onClick={handleManualFetch}
+                                    disabled={isRefreshing}
+                                    className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium shadow-md transform hover:scale-105 flex items-center justify-center disabled:opacity-75 disabled:cursor-not-allowed"
+                                >
+                                    <RotateCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
+                                    <span className="ml-2">{isRefreshing ? 'Đang tải...' : 'Làm mới'}</span>
                                 </button>
                             </div>
                         </div>
@@ -237,6 +258,9 @@ export default function AdminPage() {
         </div>
     )
 }
+
+
+// --- Các component con không thay đổi ---
 
 // --- SHARED & SUB-COMPONENTS ---
 const StatCard = ({ icon, title, value, unit, delay }: {

@@ -3,8 +3,6 @@ import os
 import requests
 from flask import Blueprint, request, jsonify
 from dotenv import load_dotenv
-from datetime import datetime, timedelta
-import random
 
 # Load environment variables
 load_dotenv()
@@ -13,23 +11,23 @@ logger = logging.getLogger(__name__)
 
 bp = Blueprint('api_supabase', __name__, url_prefix='/api/admin')
 
-@bp.route('/supabase-errors', methods=['GET'])
-def get_supabase_errors():
-    """Get error data from Supabase with clear error handling, without any data simulation."""
+@bp.route('/supabase-error_logs', methods=['GET'])
+def get_supabase_error_logs():
+    """Get error data from Supabase with clear error handling, using the correct service role key."""
     try:
         # Get query parameters
         limit = request.args.get('limit', 50, type=int)
         
-        # Get Supabase credentials
-        supabase_url = os.getenv('SUPABASE_URL')
-        supabase_key = os.getenv('SUPABASE_KEY')
-
+        # Get Supabase credentials from environment variables
+        supabase_url = os.getenv('SUPABASE_URL', "https://nuadflxsgwazllqiswfo.supabase.co")
+        supabase_key = os.getenv('SUPABASE_SERVICE_ROLE_KEY')  # Load từ .env file
+        
         # Check for credentials before proceeding
         if not supabase_url or not supabase_key:
-            logger.warning("Supabase credentials (SUPABASE_URL, SUPABASE_KEY) not found in .env")
+            logger.warning("Supabase credentials (SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY) not found in .env")
             return jsonify({
                 'success': False,
-                'message': 'Server configuration error: Supabase credentials are not set.',
+                'message': 'Server configuration error: Supabase service role key is not set.',
                 'source': 'Configuration Error'
             }), 500
 
@@ -39,16 +37,26 @@ def get_supabase_errors():
         api_url = f"{supabase_url}/rest/v1/error_logs"
         headers = {
             'apikey': supabase_key,
-            'Authorization': f'Bearer {supabase_key}',
+            'Authorization': f'Bearer {supabase_key}',  # SỬA: Dùng biến thay vì hardcode
             'Content-Type': 'application/json'
         }
         
         params = {
             'order': 'created_at.desc',
-            'limit': limit
+            'limit': limit,
+            'select': '*'  # Đảm bảo lấy tất cả các cột
         }
+        
+        # Log để debug
+        logger.info(f"Making request to: {api_url}")
+        logger.info(f"Headers: {dict(headers)}")  # Không log key để bảo mật
+        logger.info(f"Params: {params}")
             
         response = requests.get(api_url, headers=headers, params=params, timeout=10)
+        
+        # Log response để debug
+        logger.info(f"Response status: {response.status_code}")
+        logger.info(f"Response headers: {dict(response.headers)}")
             
         if response.status_code == 200:
             data = response.json()
@@ -84,17 +92,18 @@ def get_supabase_errors():
             return jsonify({
                 'success': False,
                 'message': error_message,
-                'source': 'Supabase API Error'
+                'source': 'Supabase API Error',
+                'status_code': response.status_code,
+                'response_text': response.text[:500]  # Giới hạn độ dài response
             }), response.status_code
             
     except requests.exceptions.RequestException as e:
-        # THAY ĐỔI: Xử lý lỗi mạng và trả về lỗi JSON thay vì dữ liệu giả
         logger.error(f"Network error connecting to Supabase: {e}")
         return jsonify({
             'success': False,
-            'message': f'Network error: Could not connect to Supabase. Details: {e}',
+            'message': f'Network error: Could not connect to Supabase. Details: {str(e)}',
             'source': 'Network Error'
-        }), 503  # 503 Service Unavailable is appropriate here
+        }), 503
     
     except Exception as e:
         logger.error(f"An unexpected error occurred: {str(e)}")
@@ -103,5 +112,3 @@ def get_supabase_errors():
             'message': f'An unexpected server error occurred: {str(e)}',
             'source': 'Unexpected Server Error'
         }), 500
-
-# XÓA: Toàn bộ các hàm get_realistic_error_data() và generate_realistic_stack_trace() đã được loại bỏ.
