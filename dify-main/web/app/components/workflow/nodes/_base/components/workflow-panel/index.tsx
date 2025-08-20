@@ -20,7 +20,7 @@ import { useTranslation } from 'react-i18next'
 import NextStep from '../next-step'
 import PanelOperator from '../panel-operator'
 import NodePosition from '@/app/components/workflow/nodes/_base/components/node-position'
-import HelpLink from '../help-link'
+//import HelpLink from '../help-link'
 import {
   DescriptionInput,
   TitleInput,
@@ -363,9 +363,9 @@ const BasePanel: FC<BasePanelProps> = ({
                   </Tooltip>
                 )
               }
-              <NodePosition nodeId={id}></NodePosition>
-              <HelpLink nodeType={data.type} />
-              <PanelOperator id={id} data={data} showHelpLink={false} />
+              {/* <NodePosition nodeId={id}></NodePosition> */}
+              {/* <HelpLink nodeType={data.type} /> */}
+              {/* <PanelOperator id={id} data={data} showHelpLink={false} /> */}
               <div className='mx-3 h-3.5 w-[1px] bg-divider-regular' />
               <div
                 className='flex h-6 w-6 cursor-pointer items-center justify-center'

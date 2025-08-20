@@ -5,23 +5,17 @@ import { useRouter } from 'next/navigation'
 import {
   RiAccountCircleLine,
   RiArrowRightUpLine,
-  RiBookOpenLine,
   RiDashboardLine,
-  RiGithubLine,
   RiGraduationCapFill,
   RiInformation2Line,
   RiLogoutBoxRLine,
-  RiMap2Line,
   RiSettings3Line,
-  RiStarLine,
   RiTShirt2Line,
 } from '@remixicon/react'
 import Link from 'next/link'
 import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react'
 import Indicator from '../indicator'
 import AccountAbout from '../account-about'
-import GithubStar from '../github-star'
-import Support from './support'
 import Compliance from './compliance'
 import PremiumBadge from '@/app/components/base/premium-badge'
 import Avatar from '@/app/components/base/avatar'
@@ -69,7 +63,7 @@ export default function AppSelector() {
     const cookieExpires = getCookie('admin_session_expires')
     
     const isValidSession = (adminToken && adminExpires && Date.now() < parseInt(adminExpires)) ||
-                          (cookieToken && cookieExpires && Date.now() < parseInt(cookieExpires))
+                           (cookieToken && cookieExpires && Date.now() < parseInt(cookieExpires))
     
     if (isValidSession) {
       // Session is valid, go directly to admin
@@ -118,7 +112,7 @@ export default function AppSelector() {
                 <MenuItems
                   className="
                     absolute right-0 mt-1.5 w-60 max-w-80
-                    origin-top-right divide-y divide-divider-subtle rounded-xl bg-components-panel-bg-blur shadow-lg
+                    origin-top-right rounded-xl bg-components-panel-bg-blur shadow-lg
                     backdrop-blur-sm focus:outline-none
                   "
                 >
@@ -175,38 +169,11 @@ export default function AppSelector() {
                   </div>
                   {!systemFeatures.branding.enabled && <>
                     <div className='p-1'>
-                      <MenuItem>
-                        <Link
-                          className={cn(itemClassName, 'group justify-between',
-                            'data-[active]:bg-state-base-hover',
-                          )}
-                          href={docLink('/introduction')}
-                          target='_blank' rel='noopener noreferrer'>
-                          <RiBookOpenLine className='size-4 shrink-0 text-text-tertiary' />
-                          <div className='system-md-regular grow px-1 text-text-secondary'>{t('common.userProfile.helpCenter')}</div>
-                          <RiArrowRightUpLine className='size-[14px] shrink-0 text-text-tertiary' />
-                        </Link>
-                      </MenuItem>
-                      <Support />
+                      {/* Support item removed */}
                       {IS_CLOUD_EDITION && isCurrentWorkspaceOwner && <Compliance />}
                     </div>
                     <div className='p-1'>
-                      {
-                        document?.body?.getAttribute('data-public-site-about') !== 'hide' && (
-                          <MenuItem>
-                            <div className={cn(itemClassName, 'justify-between',
-                              'data-[active]:bg-state-base-hover',
-                            )} onClick={() => setAboutVisible(true)}>
-                              <RiInformation2Line className='size-4 shrink-0 text-text-tertiary' />
-                              <div className='system-md-regular grow px-1 text-text-secondary'>{t('common.userProfile.about')}</div>
-                              <div className='flex shrink-0 items-center'>
-                                <div className='system-xs-regular mr-2 text-text-tertiary'>{langGeniusVersionInfo.current_version}</div>
-                                <Indicator color={langGeniusVersionInfo.current_version === langGeniusVersionInfo.latest_version ? 'green' : 'orange'} />
-                              </div>
-                            </div>
-                          </MenuItem>
-                        )
-                      }
+                      {/* About item removed */}
                     </div>
                   </>}
                   <MenuItem disabled>

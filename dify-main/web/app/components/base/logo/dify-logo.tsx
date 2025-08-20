@@ -7,7 +7,7 @@ export type LogoStyle = 'default' | 'monochromeWhite'
 
 export const logoPathMap: Record<LogoStyle, string> = {
   default: '/logo/logo.svg',
-  monochromeWhite: '/logo/logo-monochrome-white.svg',
+  monochromeWhite: '/logo/logo-site-dark.png',
 }
 
 export type LogoSize = 'large' | 'medium' | 'small'
