@@ -5,7 +5,7 @@ import { useFavicon, useTitle } from 'ahooks'
 export default function useDocumentTitle(title: string) {
   const isPending = useGlobalPublicStore(s => s.isGlobalPending)
   const systemFeatures = useGlobalPublicStore(s => s.systemFeatures)
-  const prefix = title ? `${title} - ` : ''
+  const prefix = title ? `${title}` : ''
   let titleStr = ''
   let favicon = ''
   if (isPending === false) {
@@ -14,8 +14,8 @@ export default function useDocumentTitle(title: string) {
       favicon = systemFeatures.branding.favicon
     }
     else {
-      titleStr = `${prefix}Dify`
-      favicon = '/favicon.ico'
+      titleStr = `${prefix}`
+      favicon = '/logo-site.ico'
     }
   }
   useTitle(titleStr)
