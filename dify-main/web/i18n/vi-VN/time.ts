@@ -31,7 +31,7 @@ const translation = {
   title: {
     pickTime: 'Chọn Thời Gian',
   },
-  defaultPlaceholder: 'Chọn một thời gian...',
+  defaultPlaceholder: 'Chọn một thời gian AiNguyenPhamHung',
 }
 
 export default translation

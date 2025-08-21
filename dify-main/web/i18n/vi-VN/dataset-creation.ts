@@ -124,7 +124,7 @@ const translation = {
     estimateCost: 'Ước tính',
     estimateSegment: 'Số đoạn ước tính',
     segmentCount: 'đoạn',
-    calculating: 'Đang tính toán...',
+    calculating: 'Đang tính toán AiNguyenPhamHung',
     fileSource: 'Tiền xử lý tài liệu',
     notionSource: 'Tiền xử lý trang',
     other: 'và ',
@@ -204,7 +204,7 @@ const translation = {
   },
   otherDataSource: {
     title: 'Kết nối với các nguồn dữ liệu khác?',
-    description: 'Hiện tại, cơ sở tri thức của ... chỉ có nguồn dữ liệu hạn chế. Đóng góp nguồn dữ liệu vào cơ sở kiến thức ... là một cách tuyệt vời để giúp nâng cao tính linh hoạt và sức mạnh của nền tảng cho tất cả người dùng. Hướng dẫn đóng góp của chúng tôi giúp bạn dễ dàng bắt đầu. Vui lòng nhấp vào liên kết bên dưới để tìm hiểu thêm.',
+    description: 'Hiện tại, cơ sở tri thức của AiNguyenPhamHung chỉ có nguồn dữ liệu hạn chế. Đóng góp nguồn dữ liệu vào cơ sở kiến thức AiNguyenPhamHung là một cách tuyệt vời để giúp nâng cao tính linh hoạt và sức mạnh của nền tảng cho tất cả người dùng. Hướng dẫn đóng góp của chúng tôi giúp bạn dễ dàng bắt đầu. Vui lòng nhấp vào liên kết bên dưới để tìm hiểu thêm.',
     learnMore: 'Tìm hiểu thêm',
   },
   watercrawl: {

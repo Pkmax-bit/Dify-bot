@@ -41,16 +41,19 @@ const WelcomePage = () => {
                 </svg>
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Chào mừng đến với
-              <span className="block bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                ..... AI Platform
-              </span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Nền tảng AI mạnh mẽ giúp bạn xây dựng và triển khai các ứng dụng AI thông minh. 
-              Từ chatbot đến workflow phức tạp, tất cả trong một giao diện thân thiện.
-            </p>
+            <div className="relative">
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mt-10 mb-10">
+                Chào mừng đến với
+                <span className="block bg-gradient-to-r from-primary-700 to-purple-700 bg-clip-text text-transparent">
+                  AiNguyenPhamHung Platform
+                </span>
+                
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Nền tảng AI mạnh mẽ giúp bạn xây dựng và triển khai các ứng dụng AI thông minh. 
+                Từ chatbot đến workflow phức tạp, tất cả trong một giao diện thân thiện.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/apps" 
@@ -71,7 +74,7 @@ const WelcomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Tính năng nổi bật của .....
+              Tính năng nổi bật của AiNguyenPhamHung.
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Khám phá những công cụ mạnh mẽ giúp bạn tạo ra các ứng dụng AI tuyệt vời
@@ -189,7 +192,7 @@ const WelcomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-gray-400 text-sm">
-              © 2025 Được xây dựng với ..... 
+              © 2025 Được xây dựng với AiNguyenPhamHung. 
             </p>
           </div>
         </div>

@@ -20,9 +20,9 @@ const translation = {
     'Việc xóa ứng dụng là không thể hoàn tác. Người dùng sẽ không thể truy cập vào ứng dụng của bạn nữa và tất cả cấu hình cũng như nhật ký nhắc sẽ bị xóa vĩnh viễn.',
   appDeleted: 'Ứng dụng đã bị xóa',
   appDeleteFailed: 'Không thể xóa ứng dụng',
-  join: 'Tham gia cộng đồng',
+  join: '',
   communityIntro:
-    'Thảo luận với các thành viên nhóm, người đóng góp và nhà phát triển trên các kênh khác nhau.',
+    '',
   roadmap: 'Xem lộ trình của chúng tôi',
   newApp: {
     startFromBlank: 'Tạo mới',
@@ -160,7 +160,7 @@ const translation = {
     },
     aliyun: {
       title: 'Giám sát Đám mây',
-      description: 'Nền tảng quan sát được quản lý hoàn toàn và không cần bảo trì do Alibaba Cloud cung cấp, cho phép giám sát, theo dõi và đánh giá các ứng dụng Dify ngay lập tức.',
+      description: 'Nền tảng quan sát được quản lý hoàn toàn và không cần bảo trì do Alibaba Cloud cung cấp, cho phép giám sát, theo dõi và đánh giá các ứng dụng AiNguyenPhamHung ngay lập tức.',
     },
   },
   answerIcon: {
@@ -191,13 +191,13 @@ const translation = {
       Programming: 'Chương trình',
       HR: 'HR',
     },
-    searchAllTemplate: 'Tìm kiếm tất cả các mẫu...',
+    searchAllTemplate: 'Tìm kiếm tất cả các mẫu AiNguyenPhamHung',
     byCategories: 'THEO DANH MỤC',
   },
   showMyCreatedAppsOnly: 'Chỉ hiển thị ứng dụng do tôi tạo',
   appSelector: {
     params: 'THÔNG SỐ ỨNG DỤNG',
-    placeholder: 'Chọn một ứng dụng...',
+    placeholder: 'Chọn một ứng dụng AiNguyenPhamHung',
     noParams: 'Không cần thông số',
     label: 'Ứng dụng',
   },

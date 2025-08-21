@@ -22,7 +22,7 @@ const WelcomeNav = ({ className }: { className?: string }) => {
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10m0 0V6a2 2 0 00-2-2H9a2 2 0 00-2 2v2m0 0v8a2 2 0 002 2h6a2 2 0 002-2V8" />
         </svg>
-        <span className='font-medium'>Xin chào</span>
+        <span className='font-medium'>Welcome</span>
       </div>
     </div>
   )

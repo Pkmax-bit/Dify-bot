@@ -47,7 +47,7 @@ const translation = {
     title: 'Hoàn thiện AI',
     queryTitle: 'Nội dung truy vấn',
     completionResult: 'Kết quả hoàn thiện',
-    queryPlaceholder: 'Nhập nội dung truy vấn của bạn...',
+    queryPlaceholder: 'Nhập nội dung truy vấn của bạn AiNguyenPhamHung',
     run: 'Thực thi',
     copy: 'Sao chép',
     resultTitle: 'Kết quả AI',
