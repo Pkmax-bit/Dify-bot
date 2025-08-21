@@ -51,7 +51,7 @@ const translation = {
     title: 'AI Completion',
     queryTitle: 'Query content',
     completionResult: 'Completion result',
-    queryPlaceholder: 'Write your query content...',
+    queryPlaceholder: 'Write your query content AiNguyenPhamHung',
     run: 'Execute',
     execution: 'EXECUTION',
     executions: '{{num}} EXECUTIONS',

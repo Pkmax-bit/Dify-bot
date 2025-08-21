@@ -197,15 +197,15 @@ const translation = {
     newPassword: 'Nowe hasło',
     confirmPassword: 'Potwierdź hasło',
     notEqual: 'Dwa hasła są różne.',
-    langGeniusAccount: 'Konto Dify',
-    langGeniusAccountTip: 'Twoje konto Dify i powiązane dane użytkownika.',
+    langGeniusAccount: 'Konto AiNguyenPhamHung',
+    langGeniusAccountTip: 'Twoje konto AiNguyenPhamHung i powiązane dane użytkownika.',
     editName: 'Edytuj nazwę',
     showAppLength: 'Pokaż {{length}} aplikacje',
     delete: 'Usuń konto',
     deleteTip: 'Usunięcie konta spowoduje trwałe usunięcie wszystkich danych i nie będzie można ich odzyskać.',
     deleteConfirmTip: 'Aby potwierdzić, wyślij następujące informacje z zarejestrowanego adresu e-mail na adres ',
     myAccount: 'Moje konto',
-    studio: 'Dify Studio',
+    studio: 'AiNguyenPhamHung Studio',
     account: 'Rachunek',
     deletePrivacyLinkTip: 'Aby uzyskać więcej informacji o tym, jak postępujemy z Twoimi danymi, zapoznaj się z naszą',
     deletePrivacyLink: 'Polityka prywatności.',
@@ -271,7 +271,7 @@ const translation = {
     invitedAsRole: 'Zaproszony jako użytkownik typu {{role}}',
     invitationSent: 'Zaproszenie wysłane',
     invitationSentTip:
-      'Zaproszenie zostało wysłane, a oni mogą zalogować się do Dify, aby uzyskać dostęp do danych Twojego zespołu.',
+      'Zaproszenie zostało wysłane, a oni mogą zalogować się do AiNguyenPhamHung, aby uzyskać dostęp do danych Twojego zespołu.',
     invitationLink: 'Link zaproszenia',
     failedInvitationEmails: 'Poniższe osoby nie zostały pomyślnie zaproszone',
     ok: 'OK',
@@ -345,7 +345,7 @@ const translation = {
       openaiHosted: 'Hostowany OpenAI',
       onTrial: 'NA PROBĘ',
       exhausted: 'WYCZERPANY LIMIT',
-      desc: 'Usługa hostowania OpenAI dostarczana przez Dify pozwala korzystać z modeli takich jak GPT-3.5. Przed wyczerpaniem limitu próbnego należy skonfigurować inne dostawców modeli.',
+      desc: 'Usługa hostowania OpenAI dostarczana przez AiNguyenPhamHung pozwala korzystać z modeli takich jak GPT-3.5. Przed wyczerpaniem limitu próbnego należy skonfigurować inne dostawców modeli.',
       callTimes: 'Czasy wywołań',
       usedUp: 'Limit próbny został wyczerpany. Dodaj własnego dostawcę modeli.',
       useYourModel: 'Aktualnie używany jest własny dostawca modeli.',
@@ -525,7 +525,7 @@ const translation = {
   },
   apiBasedExtension: {
     title:
-      'Rozszerzenia oparte na interfejsie API zapewniają scentralizowane zarządzanie interfejsami API, upraszczając konfigurację dla łatwego użytkowania w aplikacjach Dify.',
+      'Rozszerzenia oparte na interfejsie API zapewniają scentralizowane zarządzanie interfejsami API, upraszczając konfigurację dla łatwego użytkowania w aplikacjach AiNguyenPhamHung.',
     link: 'Dowiedz się, jak opracować własne rozszerzenie interfejsu API.',
     add: 'Dodaj rozszerzenie interfejsu API',
     selector: {
@@ -555,8 +555,8 @@ const translation = {
   about: {
     changeLog: 'Dziennik zmian',
     updateNow: 'Aktualizuj teraz',
-    nowAvailable: 'Dify {{version}} jest teraz dostępny.',
-    latestAvailable: 'Dify {{version}} jest najnowszą dostępną wersją.',
+    nowAvailable: 'AiNguyenPhamHung {{version}} jest teraz dostępny.',
+    latestAvailable: 'AiNguyenPhamHung {{version}} jest najnowszą dostępną wersją.',
   },
   appMenus: {
     overview: 'Monitorowanie',

@@ -83,7 +83,7 @@ const translation = {
         'Ręczna edycja i adnotacja odpowiedzi zapewniają możliwość dostosowania wysokiej jakości odpowiedzi na pytania dla aplikacji. (Stosowane tylko w aplikacjach czatowych)',
     },
     ragAPIRequestTooltip:
-      'Odnosi się do liczby wywołań API wykorzystujących tylko zdolności przetwarzania bazy wiedzy Dify.',
+      'Odnosi się do liczby wywołań API wykorzystujących tylko zdolności przetwarzania bazy wiedzy AiNguyenPhamHung.',
     receiptInfo:
       'Tylko właściciel zespołu i administrator zespołu mogą subskrybować i przeglądać informacje o rozliczeniach',
     annotationQuota: 'Przydział adnotacji',
@@ -103,7 +103,7 @@ const translation = {
     teamMember_one: '{{count,number}} Członek zespołu',
     priceTip: 'na przestrzeń roboczą/',
     self: 'Samo-hostowane',
-    apiRateLimitTooltip: 'Limit aktywności API dotyczy wszystkich żądań składanych za pośrednictwem API Dify, w tym generowania tekstu, rozmów czatowych, wykonywania przepływów pracy i przetwarzania dokumentów.',
+    apiRateLimitTooltip: 'Limit aktywności API dotyczy wszystkich żądań składanych za pośrednictwem API AiNguyenPhamHung, w tym generowania tekstu, rozmów czatowych, wykonywania przepływów pracy i przetwarzania dokumentów.',
     freeTrialTipSuffix: 'Nie jest wymagana karta kredytowa',
     documentsRequestQuota: '{{count,number}}/min Limit wiedzy na żądanie',
     documentsRequestQuotaTooltip: 'Określa całkowitą liczbę działań, jakie przestrzeń robocza może wykonać na minutę w ramach bazy wiedzy, w tym tworzenie zbiorów danych, usuwanie, aktualizacje, przesyłanie dokumentów, modyfikacje, archiwizowanie i zapytania do bazy wiedzy. Ta metryka jest używana do oceny wydajności zapytań do bazy wiedzy. Na przykład, jeśli użytkownik Sandbox wykona 10 kolejnych testów w ciągu jednej minuty, jego przestrzeń robocza zostanie tymczasowo ograniczona w wykonywaniu następujących działań przez następną minutę: tworzenie zbiorów danych, usuwanie, aktualizacje oraz przesyłanie lub modyfikacje dokumentów.',
@@ -136,12 +136,12 @@ const translation = {
       includesTitle: 'Wszystko w planie Zespołowym, plus:',
       features: {
         3: 'Wiele przestrzeni roboczych i zarządzanie przedsiębiorstwem',
-        5: 'Wynegocjowane SLA przez Dify Partners',
+        5: 'Wynegocjowane SLA przez AiNguyenPhamHung Partners',
         0: 'Rozwiązania do wdrożeń na dużą skalę klasy przedsiębiorstw',
         8: 'Profesjonalne wsparcie techniczne',
         2: 'Ekskluzywne funkcje przedsiębiorstwa',
         6: 'Zaawansowane zabezpieczenia i kontrola',
-        7: 'Aktualizacje i konserwacja przez Dify Oficjalnie',
+        7: 'Aktualizacje i konserwacja przez AiNguyenPhamHung Oficjalnie',
         4: 'SSO',
         1: 'Autoryzacja licencji komercyjnej',
       },
@@ -154,7 +154,7 @@ const translation = {
       features: {
         0: 'Wszystkie funkcje podstawowe wydane w publicznym repozytorium',
         1: 'Jedno Miejsce Pracy',
-        2: 'Zgodne z licencją Dify Open Source',
+        2: 'Zgodne z licencją AiNguyenPhamHung Open Source',
       },
       includesTitle: 'Darmowe funkcje:',
       name: 'Społeczność',

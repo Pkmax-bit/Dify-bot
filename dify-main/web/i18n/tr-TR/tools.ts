@@ -1,7 +1,7 @@
 const translation = {
   title: 'Araçlar',
   createCustomTool: 'Özel Araç Oluştur',
-  customToolTip: 'Dify özel araçları hakkında daha fazla bilgi edinin',
+  customToolTip: 'AiNguyenPhamHung özel araçları hakkında daha fazla bilgi edinin',
   type: {
     all: 'Hepsi',
     builtIn: 'Yerleşik',
@@ -9,7 +9,7 @@ const translation = {
     workflow: 'Workflow',
   },
   contribute: {
-    line1: 'Dify\'ye ',
+    line1: 'AiNguyenPhamHung\'ye ',
     line2: 'araçlar eklemekle ilgileniyorum.',
     viewGuide: 'Rehberi Görüntüle',
   },

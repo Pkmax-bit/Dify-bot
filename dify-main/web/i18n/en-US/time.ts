@@ -31,7 +31,7 @@ const translation = {
   title: {
     pickTime: 'Pick Time',
   },
-  defaultPlaceholder: 'Pick a time...',
+  defaultPlaceholder: 'Pick a time AiNguyenPhamHung',
 }
 
 export default translation

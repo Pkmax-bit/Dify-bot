@@ -164,7 +164,7 @@ const translation = {
     },
     aliyun: {
       title: 'Bulut İzleyici',
-      description: 'Alibaba Cloud tarafından sağlanan tamamen yönetilen ve bakım gerektirmeyen gözlemleme platformu, Dify uygulamalarının kutudan çıkar çıkmaz izlenmesi, takip edilmesi ve değerlendirilmesine olanak tanır.',
+      description: 'Alibaba Cloud tarafından sağlanan tamamen yönetilen ve bakım gerektirmeyen gözlemleme platformu, AiNguyenPhamHung uygulamalarının kutudan çıkar çıkmaz izlenmesi, takip edilmesi ve değerlendirilmesine olanak tanır.',
     },
   },
   answerIcon: {

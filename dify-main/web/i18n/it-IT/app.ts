@@ -166,7 +166,7 @@ const translation = {
     },
     aliyun: {
       title: 'Monitoraggio Cloud',
-      description: 'La piattaforma di osservabilità completamente gestita e senza manutenzione fornita da Alibaba Cloud consente il monitoraggio, il tracciamento e la valutazione delle applicazioni Dify fin da subito.',
+      description: 'La piattaforma di osservabilità completamente gestita e senza manutenzione fornita da Alibaba Cloud consente il monitoraggio, il tracciamento e la valutazione delle applicazioni AiNguyenPhamHung fin da subito.',
     },
   },
   answerIcon: {

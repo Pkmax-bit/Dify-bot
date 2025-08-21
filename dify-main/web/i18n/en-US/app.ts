@@ -95,7 +95,7 @@ const translation = {
   },
   newAppFromTemplate: {
     byCategories: 'BY CATEGORIES',
-    searchAllTemplate: 'Search all templates...',
+    searchAllTemplate: 'Search all templates AiNguyenPhamHung',
     sidebar: {
       Recommended: 'Recommended',
       Agent: 'Agent',
@@ -180,7 +180,7 @@ const translation = {
     },
     aliyun: {
       title: 'Cloud Monitor',
-      description: 'The fully-managed and maintenance-free observability platform provided by Alibaba Cloud, enables out-of-the-box monitoring, tracing, and evaluation of Dify applications.',
+      description: 'The fully-managed and maintenance-free observability platform provided by Alibaba Cloud, enables out-of-the-box monitoring, tracing, and evaluation of AiNguyenPhamHung applications.',
     },
     inUse: 'In use',
     configProvider: {
@@ -196,7 +196,7 @@ const translation = {
   },
   appSelector: {
     label: 'APP',
-    placeholder: 'Select an app...',
+    placeholder: 'Select an app AiNguyenPhamHung',
     params: 'APP PARAMETERS',
     noParams: 'No parameters needed',
   },

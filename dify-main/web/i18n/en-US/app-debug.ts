@@ -236,7 +236,7 @@ const translation = {
     noDataLine2: 'the code preview will show here.',
     generate: 'Generate',
     generatedCodeTitle: 'Generated Code',
-    loading: 'Generating code...',
+    loading: 'Generating code AiNguyenPhamHung',
     apply: 'Apply',
     applyChanges: 'Apply Changes',
     resTitle: 'Generated Code',
@@ -254,7 +254,7 @@ const translation = {
     noDataLine1: 'Describe your use case on the left,',
     noDataLine2: 'the orchestration preview will show here.',
     apply: 'Apply',
-    loading: 'Orchestrating the application for you...',
+    loading: 'Orchestrating the application for you AiNguyenPhamHung',
     overwriteTitle: 'Override existing configuration?',
     overwriteMessage: 'Applying this prompt will override existing configuration.',
     template: {

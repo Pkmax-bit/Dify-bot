@@ -9,7 +9,7 @@ const translation = {
   },
   contribute: {
     line1: 'Sunt interesat să ',
-    line2: 'contribui la Dify cu instrumente.',
+    line2: 'contribui la AiNguyenPhamHung cu instrumente.',
     viewGuide: 'Vezi ghidul',
   },
   author: 'De',
@@ -164,7 +164,7 @@ const translation = {
     },
   },
   openInStudio: 'Deschide în Studio',
-  customToolTip: 'Aflați mai multe despre instrumentele personalizate Dify',
+  customToolTip: 'Aflați mai multe despre instrumentele personalizate AiNguyenPhamHung',
   toolNameUsageTip: 'Numele de apel al instrumentului pentru raționamentul și solicitarea agentului',
   copyToolName: 'Copiază numele',
   noTools: 'Nu s-au găsit unelte',

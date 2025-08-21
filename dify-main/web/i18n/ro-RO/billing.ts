@@ -75,7 +75,7 @@ const translation = {
       title: 'Limite de cotă de anotare',
       tooltip: 'Editarea și anotarea manuală a răspunsurilor oferă capacități de întrebări și răspunsuri personalizabile și de înaltă calitate pentru aplicații. (Aplicabil numai în aplicațiile de chat)',
     },
-    ragAPIRequestTooltip: 'Se referă la numărul de apeluri API care invocă doar capacitățile de procesare a bazei de cunoștințe a Dify.',
+    ragAPIRequestTooltip: 'Se referă la numărul de apeluri API care invocă doar capacitățile de procesare a bazei de cunoștințe a AiNguyenPhamHung.',
     receiptInfo: 'Doar proprietarul echipei și administratorul echipei pot să se aboneze și să vizualizeze informațiile de facturare',
     annotationQuota: 'Cota de adnotare',
     priceTip: 'pe spațiu de lucru/',
@@ -97,7 +97,7 @@ const translation = {
     annualBilling: 'Facturare anuala',
     freeTrialTip: 'perioadă de probă gratuită de 200 de apeluri OpenAI.',
     documentsRequestQuotaTooltip: 'Specificați numărul total de acțiuni pe care un spațiu de lucru le poate efectua pe minut în cadrul bazei de cunoștințe, inclusiv crearea, ștergerea, actualizările setului de date, încărcările de documente, modificările, arhivarea și interogările bazei de cunoștințe. Acest metric este utilizat pentru a evalua performanța cererilor din baza de cunoștințe. De exemplu, dacă un utilizator Sandbox efectuează 10 teste consecutive de hituri într-un minut, spațiul său de lucru va fi restricționat temporar de la efectuarea următoarelor acțiuni pentru minutul următor: crearea setului de date, ștergerea, actualizările și încărcările sau modificările documentelor.',
-    apiRateLimitTooltip: 'Limita de rată API se aplică tuturor cererilor efectuate prin API-ul Dify, inclusiv generarea de texte, conversațiile de chat, execuțiile fluxului de lucru și procesarea documentelor.',
+    apiRateLimitTooltip: 'Limita de rată API se aplică tuturor cererilor efectuate prin API-ul AiNguyenPhamHung, inclusiv generarea de texte, conversațiile de chat, execuțiile fluxului de lucru și procesarea documentelor.',
   },
   plans: {
     sandbox: {
@@ -128,9 +128,9 @@ const translation = {
         2: 'Funcții exclusive pentru întreprinderi',
         8: 'Asistență tehnică profesională',
         4: 'SSO',
-        7: 'Actualizări și întreținere de către Dify Oficial',
+        7: 'Actualizări și întreținere de către AiNguyenPhamHung Oficial',
         1: 'Autorizare pentru licență comercială',
-        5: 'SLA-uri negociate de partenerii Dify',
+        5: 'SLA-uri negociate de partenerii AiNguyenPhamHung',
         0: 'Soluții de desfășurare scalabile de nivel enterprise',
       },
       for: 'Pentru echipe de mari dimensiuni',
@@ -140,7 +140,7 @@ const translation = {
     },
     community: {
       features: {
-        2: 'Se conformează Licenței Open Source Dify',
+        2: 'Se conformează Licenței Open Source AiNguyenPhamHung',
         1: 'Spațiu de lucru unic',
         0: 'Toate funcțiile de bază lansate sub depozitul public',
       },

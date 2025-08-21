@@ -45,9 +45,11 @@ const WelcomePage = () => {
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mt-10 mb-10">
                 Chào mừng đến với
                 <span className="block bg-gradient-to-r from-primary-700 to-purple-700 bg-clip-text text-transparent">
-                  AiNguyenPhamHung Platform
+                  AiNguyenPhamHung
+                  <br />
+                  Platform
+
                 </span>
-                
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
                 Nền tảng AI mạnh mẽ giúp bạn xây dựng và triển khai các ứng dụng AI thông minh. 

@@ -8,7 +8,7 @@ const translation = {
   },
   webapp: {
     title: 'Personalizar marca do web app',
-    removeBrand: 'Remover Powered by Dify',
+    removeBrand: 'Remover Powered by AiNguyenPhamHung',
     changeLogo: 'Alterar Imagem da Marca Powered by',
     changeLogoTip: 'Formato SVG ou PNG com tamanho mínimo de 40x40px',
   },

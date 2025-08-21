@@ -28,4 +28,5 @@ const WelcomeNav = ({ className }: { className?: string }) => {
   )
 }
 
+
 export default WelcomeNav

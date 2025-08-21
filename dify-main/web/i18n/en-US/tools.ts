@@ -1,7 +1,7 @@
 const translation = {
   title: 'Tools',
   createCustomTool: 'Create Custom Tool',
-  customToolTip: 'Learn more about ... custom tools',
+  customToolTip: 'Learn more about AiNguyenPhamHung custom tools',
   type: {
     all: 'All',
     builtIn: 'Tools',
@@ -10,7 +10,7 @@ const translation = {
   },
   contribute: {
     line1: 'I\'m interested in ',
-    line2: 'contributing tools to ....',
+    line2: 'contributing tools to AiNguyenPhamHung.',
     viewGuide: 'View the guide',
   },
   author: 'By',
@@ -59,7 +59,7 @@ const translation = {
     schemaPlaceHolder: 'Enter your OpenAPI schema here',
     viewSchemaSpec: 'View the OpenAPI-Swagger Specification',
     importFromUrl: 'Import from URL',
-    importFromUrlPlaceHolder: 'https://...',
+    importFromUrlPlaceHolder: 'https://AiNguyenPhamHung',
     urlError: 'Please enter a valid URL',
     examples: 'Examples',
     exampleOptions: {
@@ -199,13 +199,13 @@ const translation = {
       remove: 'Remove',
     },
     authorize: 'Authorize',
-    authorizing: 'Authorizing...',
+    authorizing: 'Authorizing AiNguyenPhamHung',
     authorizingRequired: 'Authorization is required',
     authorizeTip: 'After authorization, tools will be displayed here.',
     update: 'Update',
     updating: 'Updating',
-    gettingTools: 'Getting Tools...',
-    updateTools: 'Updating Tools...',
+    gettingTools: 'Getting Tools AiNguyenPhamHung',
+    updateTools: 'Updating Tools AiNguyenPhamHung',
     toolsEmpty: 'Tools not loaded',
     getTools: 'Get tools',
     toolUpdateConfirmTitle: 'Update Tool List',

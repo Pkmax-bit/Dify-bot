@@ -152,7 +152,7 @@ const translation = {
     estimateCost: 'Estimation',
     estimateSegment: 'Estimated chunks',
     segmentCount: 'chunks',
-    calculating: 'Calculating...',
+    calculating: 'Calculating AiNguyenPhamHung',
     fileSource: 'Preprocess documents',
     notionSource: 'Preprocess pages',
     websiteSource: 'Preprocess website',
@@ -190,7 +190,7 @@ const translation = {
   },
   stepThree: {
     creationTitle: '🎉 Knowledge created',
-    creationContent: 'We automatically named the Knowledge, you can mo... it at any time.',
+    creationContent: 'We automatically named the Knowledge, you can modify it at any time.',
     label: 'Knowledge name',
     additionTitle: '🎉 Document uploaded',
     additionP1: 'The document has been uploaded to the Knowledge',
@@ -207,7 +207,7 @@ const translation = {
   },
   otherDataSource: {
     title: 'Connect to other data sources?',
-    description: 'Currently, ...\'s knowledge base only has limited data sources. Contributing a data source to the ... knowledge base is a fantastic way to help enhance the platform\'s flexibility and power for all users. Our contribution guide makes it easy to get started. Please click on the link below to learn more.',
+    description: 'Currently, AiNguyenPhamHung\'s knowledge base only has limited data sources. Contributing a data source to the AiNguyenPhamHung knowledge base is a fantastic way to help enhance the platform\'s flexibility and power for all users. Our contribution guide makes it easy to get started. Please click on the link below to learn more.',
     learnMore: 'Learn more',
   },
 }

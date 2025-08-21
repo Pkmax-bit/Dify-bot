@@ -263,7 +263,7 @@ const translation = {
     name: 'NAME',
     lastActive: 'LAST ACTIVE',
     role: 'ROLES',
-    pending: 'Pending...',
+    pending: 'Pending AiNguyenPhamHung',
     owner: 'Owner',
     admin: 'Admin',
     adminTip: 'Can build apps & manage team settings',
@@ -284,7 +284,7 @@ const translation = {
     sendInvite: 'Send Invite',
     invitedAsRole: 'Invited as {{role}} user',
     invitationSent: 'Invitation sent',
-    invitationSentTip: 'Invitation sent, and they can sign in to ... to access your team data.',
+    invitationSentTip: 'Invitation sent, and they can sign in to AiNguyenPhamHung to access your team data.',
     invitationLink: 'Invitation Link',
     failedInvitationEmails: 'Below users were not invited successfully',
     ok: 'OK',
@@ -335,7 +335,7 @@ const translation = {
     enterYourKey: 'Enter your API key here',
     invalidKey: 'Invalid OpenAI API key',
     validatedError: 'Validation failed: ',
-    validating: 'Validating key...',
+    validating: 'Validating key AiNguyenPhamHung',
     saveFailed: 'Save api key failed',
     apiKeyExceedBill: 'This API KEY has no quota available, please read',
     addKey: 'Add Key',
@@ -353,7 +353,7 @@ const translation = {
       openaiHosted: 'Hosted OpenAI',
       onTrial: 'ON TRIAL',
       exhausted: 'QUOTA EXHAUSTED',
-      desc: 'The OpenAI hosting service provided by ... allows you to use models such as GPT-3.5. Before your trial quota is used up, you need to set up other model providers.',
+      desc: 'The OpenAI hosting service provided by AiNguyenPhamHung allows you to use models such as GPT-3.5. Before your trial quota is used up, you need to set up other model providers.',
       callTimes: 'Call times',
       usedUp: 'Trial quota used up. Add own Model Provider.',
       useYourModel: 'Currently using own Model Provider.',
@@ -505,7 +505,7 @@ const translation = {
       remove: 'Remove',
       selector: {
         pageSelected: 'Pages Selected',
-        searchPages: 'Search pages...',
+        searchPages: 'Search pages AiNguyenPhamHung',
         noSearchResult: 'No search results',
         addPages: 'Add pages',
         preview: 'PREVIEW',
@@ -528,7 +528,7 @@ const translation = {
     },
   },
   apiBasedExtension: {
-    title: 'API extensions provide centralized API management, simplifying configuration for easy use across ...\'s applications.',
+    title: 'API extensions provide centralized API management, simplifying configuration for easy use across AiNguyenPhamHung\'s applications.',
     link: 'Learn how to develop your own API Extension.',
     add: 'Add API Extension',
     selector: {
@@ -558,8 +558,8 @@ const translation = {
   about: {
     changeLog: 'Changelog',
     updateNow: 'Update now',
-    nowAvailable: '... {{version}} is now available.',
-    latestAvailable: '... {{version}} is the latest version available.',
+    nowAvailable: ' AiNguyenPhamHung {{version}} is now available.',
+    latestAvailable: ' AiNguyenPhamHung {{version}} is the latest version available.',
   },
   appMenus: {
     overview: 'Monitoring',
@@ -586,8 +586,8 @@ const translation = {
     noRelatedApp: 'No linked apps',
   },
   voiceInput: {
-    speaking: 'Speak now...',
-    converting: 'Converting to text...',
+    speaking: 'Speak now AiNguyenPhamHung',
+    converting: 'Converting to text AiNguyenPhamHung',
     notAllow: 'microphone not authorized',
   },
   modelName: {
@@ -615,7 +615,7 @@ const translation = {
       hitScore: 'Retrieval Score:',
     },
     inputPlaceholder: 'Talk to {{botName}}',
-    thinking: 'Thinking...',
+    thinking: 'Thinking AiNguyenPhamHung',
     thought: 'Thought',
     resend: 'Resend',
   },
@@ -679,7 +679,7 @@ const translation = {
   fileUploader: {
     uploadFromComputer: 'Local upload',
     pasteFileLink: 'Paste file link',
-    pasteFileLinkInputPlaceholder: 'Enter URL...',
+    pasteFileLinkInputPlaceholder: 'Enter URL AiNguyenPhamHung',
     uploadFromComputerReadError: 'File reading failed, please try again.',
     uploadFromComputerUploadError: 'File upload failed, please upload again.',
     uploadFromComputerLimit: 'Upload {{type}} cannot exceed {{size}}',

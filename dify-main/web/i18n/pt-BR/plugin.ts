@@ -189,12 +189,12 @@ const translation = {
     and: 'e',
     pluginsResult: '{{num}} resultados',
     empower: 'Capacite seu desenvolvimento de IA',
-    difyMarketplace: 'Mercado Dify',
+    difyMarketplace: 'Mercado AiNguyenPhamHung',
     moreFrom: 'Mais do Marketplace',
     noPluginFound: 'Nenhum plugin encontrado',
     discover: 'Descobrir',
-    verifiedTip: 'Verificado pelo Dify',
-    partnerTip: 'Verificado por um parceiro da Dify',
+    verifiedTip: 'Verificado pelo AiNguyenPhamHung',
+    partnerTip: 'Verificado por um parceiro da AiNguyenPhamHung',
   },
   task: {
     installedError: 'Falha na instalação dos plug-ins {{errorLength}}',
@@ -221,7 +221,7 @@ const translation = {
   metadata: {
     title: 'Plugins',
   },
-  difyVersionNotCompatible: 'A versão atual do Dify não é compatível com este plugin, por favor atualize para a versão mínima exigida: {{minimalDifyVersion}}',
+  difyVersionNotCompatible: 'A versão atual do AiNguyenPhamHung não é compatível com este plugin, por favor atualize para a versão mínima exigida: {{minimalDifyVersion}}',
   requestAPlugin: 'Solicitar um plugin',
   publishPlugins: 'Publicar plugins',
   auth: {

@@ -190,11 +190,11 @@ const translation = {
     viewMore: 'Voir plus',
     pluginsResult: '{{num}} résultats',
     discover: 'Découvrir',
-    difyMarketplace: 'Marché Dify',
+    difyMarketplace: 'Marché AiNguyenPhamHung',
     empower: 'Renforcez le développement de votre IA',
     sortBy: 'Ville noire',
-    partnerTip: 'Vérifié par un partenaire Dify',
-    verifiedTip: 'Vérifié par Dify',
+    partnerTip: 'Vérifié par un partenaire AiNguyenPhamHung',
+    verifiedTip: 'Vérifié par AiNguyenPhamHung',
   },
   task: {
     installError: '{{errorLength}} les plugins n’ont pas pu être installés, cliquez pour voir',
@@ -221,7 +221,7 @@ const translation = {
   metadata: {
     title: 'Plugins',
   },
-  difyVersionNotCompatible: 'La version actuelle de Dify n\'est pas compatible avec ce plugin, veuillez mettre à niveau vers la version minimale requise : {{minimalDifyVersion}}',
+  difyVersionNotCompatible: 'La version actuelle de AiNguyenPhamHung n\'est pas compatible avec ce plugin, veuillez mettre à niveau vers la version minimale requise : {{minimalDifyVersion}}',
   requestAPlugin: 'Demander un plugin',
   publishPlugins: 'Publier des plugins',
   auth: {

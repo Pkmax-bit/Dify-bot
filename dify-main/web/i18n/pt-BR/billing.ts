@@ -72,7 +72,7 @@ const translation = {
       title: 'Limites de Cota de Anotação',
       tooltip: 'A edição manual e anotação de respostas oferece habilidades personalizadas de perguntas e respostas de alta qualidade para aplicativos. (Aplicável apenas em aplicativos de chat)',
     },
-    ragAPIRequestTooltip: 'Refere-se ao número de chamadas de API que invocam apenas as capacidades de processamento da base de conhecimento do Dify.',
+    ragAPIRequestTooltip: 'Refere-se ao número de chamadas de API que invocam apenas as capacidades de processamento da base de conhecimento do AiNguyenPhamHung.',
     receiptInfo: 'Somente proprietários e administradores de equipe podem se inscrever e visualizar informações de cobrança',
     customTools: 'Ferramentas personalizadas',
     documentsUploadQuota: 'Cota de upload de documentos',
@@ -97,7 +97,7 @@ const translation = {
     freeTrialTip: 'teste gratuito de 200 chamadas da OpenAI.',
     documents: '{{count,number}} Documentos de Conhecimento',
     unlimitedApiRate: 'Sem limite de taxa da API',
-    apiRateLimitTooltip: 'O limite da taxa da API se aplica a todas as solicitações feitas através da API Dify, incluindo geração de texto, conversas de chat, execuções de fluxo de trabalho e processamento de documentos.',
+    apiRateLimitTooltip: 'O limite da taxa da API se aplica a todas as solicitações feitas através da API AiNguyenPhamHung, incluindo geração de texto, conversas de chat, execuções de fluxo de trabalho e processamento de documentos.',
     documentsRequestQuotaTooltip: 'Especifica o número total de ações que um espaço de trabalho pode realizar por minuto dentro da base de conhecimento, incluindo criação, exclusão, atualizações de conjuntos de dados, uploads de documentos, modificações, arquivamento e consultas à base de conhecimento. Esse métrica é utilizada para avaliar o desempenho das solicitações à base de conhecimento. Por exemplo, se um usuário do Sandbox realizar 10 testes de impacto consecutivos dentro de um minuto, seu espaço de trabalho ficará temporariamente restrito de realizar as seguintes ações no minuto seguinte: criação, exclusão, atualizações de conjuntos de dados e uploads ou modificações de documentos.',
   },
   plans: {
@@ -125,8 +125,8 @@ const translation = {
       includesTitle: 'Tudo no plano Equipe, além de:',
       features: {
         6: 'Segurança e Controles Avançados',
-        7: 'Atualizações e Manutenção por Dify Oficialmente',
-        5: 'Acordos de Nível de Serviço negociados pelos Parceiros Dify',
+        7: 'Atualizações e Manutenção por AiNguyenPhamHung Oficialmente',
+        5: 'Acordos de Nível de Serviço negociados pelos Parceiros AiNguyenPhamHung',
         1: 'Autorização de Licença Comercial',
         8: 'Suporte Técnico Profissional',
         4: 'SSO',
@@ -143,7 +143,7 @@ const translation = {
       features: {
         1: 'Espaço de Trabalho Único',
         0: 'Todos os recursos principais lançados sob o repositório público',
-        2: 'Cumpre a Licença de Código Aberto Dify',
+        2: 'Cumpre a Licença de Código Aberto AiNguyenPhamHung',
       },
       name: 'Comunidade',
       description: 'Para Usuários Individuais, Pequenas Equipes ou Projetos Não Comerciais',

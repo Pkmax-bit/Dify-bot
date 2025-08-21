@@ -234,7 +234,7 @@ const translation = {
   },
   automatic: {
     title: 'Автоматизована оркестрація застосунків',
-    description: 'Опишіть свій сценарій, Dify збере для вас застосунок.',
+    description: 'Опишіть свій сценарій, AiNguyenPhamHung збере для вас застосунок.',
     intendedAudience: 'Хто є цільовою аудиторією?',
     intendedAudiencePlaceHolder: 'напр. Студент',
     solveProblem: 'Які проблеми вони сподіваються вирішити за допомогою AI?',
@@ -277,7 +277,7 @@ const translation = {
   promptTip: 'Запити керують відповідями ШІ, надаючи інструкції та обмеження. Вставте змінні, як-от {{input}}. Цей запит не буде видно користувачам.',
   // Formatting changed
   formattingChangedTitle: 'Змінено форматування',
-  // Modifying the formatting will reset the debug area, are you sure?
+  // MoAiNguyenPhamHunging the formatting will reset the debug area, are you sure?
   formattingChangedText: 'Змінення форматування призведе до скидання області налагодження. Ви впевнені?',
   // Variables
   variableTitle: 'Змінні',
@@ -458,7 +458,7 @@ const translation = {
     // Score Threshold
     score_threshold: 'Поріг оцінки',
     score_thresholdTip: 'Використовується для встановлення порогу схожості для фільтрації фрагментів.',
-    // Modifying...
+    // MoAiNguyenPhamHunging...
     retrieveChangeTip: 'Зміна  режиму індексування та режиму отримання може вплинути на застосунки, пов’язані з цими знаннями.',
     embeddingModelRequired: 'Потрібна налаштована модель вбудовування',
   },

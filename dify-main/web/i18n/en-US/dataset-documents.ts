@@ -1,7 +1,7 @@
 const translation = {
   list: {
     title: 'Documents',
-    desc: 'All files of the Knowledge are shown here, and the entire Knowledge can be linked to ... citations or indexed via the Chat plugin.',
+    desc: 'All files of the Knowledge are shown here, and the entire Knowledge can be linked to AiNguyenPhamHung citations or indexed via the Chat plugin.',
     learnMore: 'Learn more',
     addFile: 'Add file',
     addPages: 'Add Pages',
@@ -57,7 +57,7 @@ const translation = {
         tip: 'You can upload files, sync from the website, or from web apps like Notion, GitHub, etc.',
       },
       sync: {
-        tip: '... will periodically download files from your Notion and complete processing.',
+        tip: 'AiNguyenPhamHung will periodically download files from your Notion and complete processing.',
       },
     },
     delete: {
@@ -316,7 +316,7 @@ const translation = {
     },
   },
   embedding: {
-    processing: 'Embedding processing...',
+    processing: 'Embedding processing AiNguyenPhamHung',
     paused: 'Embedding paused',
     completed: 'Embedding completed',
     error: 'Embedding error',
@@ -386,7 +386,7 @@ const translation = {
     regenerationConfirmTitle: 'Do you want to regenerate child chunks?',
     regenerationConfirmMessage: 'Regenerating child chunks will overwrite the current child chunks, including edited chunks and newly added chunks. The regeneration cannot be undone.',
     regeneratingTitle: 'Regenerating child chunks',
-    regeneratingMessage: 'This may take a moment, please wait...',
+    regeneratingMessage: 'This may take a moment, please wait AiNguyenPhamHung',
     regenerationSuccessTitle: 'Regeneration completed',
     regenerationSuccessMessage: 'You can close this window.',
     edited: 'EDITED',

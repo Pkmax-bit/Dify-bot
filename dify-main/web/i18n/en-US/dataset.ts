@@ -18,7 +18,7 @@ const translation = {
   externalKnowledgeNamePlaceholder: 'Please enter the name of the knowledge base',
   externalKnowledgeDescriptionPlaceholder: 'Describe what\'s in this Knowledge Base (optional)',
   learnHowToWriteGoodKnowledgeDescription: 'Learn how to write a good knowledge description',
-  externalAPIPanelDescription: 'The external knowledge API is used to connect to a knowledge base outside of ... and retrieve knowledge from that knowledge base.',
+  externalAPIPanelDescription: 'The external knowledge API is used to connect to a knowledge base outside of AiNguyenPhamHung and retrieve knowledge from that knowledge base.',
   externalAPIPanelDocumentation: 'Learn how to create an External Knowledge API',
   localDocs: 'Local Docs',
   documentCount: ' docs',
@@ -77,7 +77,7 @@ const translation = {
   datasetDeleted: 'Knowledge deleted',
   datasetDeleteFailed: 'Failed to delete Knowledge',
   didYouKnow: 'Did you know?',
-  intro1: 'The Knowledge can be integrated into the ... application ',
+  intro1: 'The Knowledge can be integrated into the AiNguyenPhamHung application ',
   intro2: 'as a context',
   intro3: ',',
   intro4: 'or it ',
@@ -172,7 +172,7 @@ const translation = {
   metadata: {
     metadata: 'Metadata',
     addMetadata: 'Add Metadata',
-    chooseTime: 'Choose a time...',
+    chooseTime: 'Choose a time AiNguyenPhamHung',
     createMetadata: {
       title: 'New Metadata',
       back: 'Back',
